@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Java: Compilar e Executar",
+            "type": "java",
+            "request": "launch",
+            "mainClass": "org.junit.runner.JUnitCore",
+            "args": "com.example.test.TestGoogleSearch",
+            "preLaunchTask": "run"
+        }
+    ]
+}
