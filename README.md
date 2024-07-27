@@ -1,7 +1,7 @@
 # Simple Automated Web Testing
 
 <div align="center" >
-<img src="https://github.com/user-attachments/assets/a1e413be-d32b-4659-bca2-d6c400160578" alt="Postman" width="600">
+<img src="https://github.com/user-attachments/assets/14ce3024-03e2-4a9d-abcb-09162f6991d7" alt="Postman" width="450">
 </div>
 
 ## Description
@@ -51,7 +51,6 @@ TestSwagLabs/<br>
 │ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|── allure-results/<br>
 
 
-
 ## Setup Instructions
 
 ### Clone the Repository
@@ -62,9 +61,9 @@ Clone the project repository from GitHub:
 git clone https://github.com/your-username/TestSwagLabs.git
 cd TestSwagLabs
 ```
-Compile and Run Tests
+### Compile and Run Tests
 Create a script called run-tests.sh in the project directory with the following content to compile and run the tests:
-
+```sh
 #!/bin/bash
 
 # Ensure the output directory exists
@@ -75,45 +74,37 @@ javac -cp "lib/*" -d out src/main/java/com/example/test/TestSwagLabs.java
 
 # Run the tests
 java -cp "out:lib/*" org.junit.runner.JUnitCore com.example.test.TestSwagLabs
-
-Make the script executable:
-
+```
+### Make the script executable:
+```sh
 chmod +x run-tests.sh
-
-To compile and run the tests, execute:
-
+```
+### To compile and run the tests, execute:
+```sh
 ./run-tests.sh
+```
 
-Generate Allure Report
+### Generate Allure Report
 After running the tests, you can generate the Allure report:
-
+```sh
 allure serve allure-results
-
+```
 This command will start a local server and open the Allure report in your default browser.
 
-Test Details
-The test script TestSwagLabs.java includes the following steps:
+## Test Details
+The test script TestSwagLabs.java includes the following steps:<br>
 
-Open Swag Labs login page
-Validate login page title
-Enter username and password, then login
-Validate main page title after login
-Validate Products section title
-The test script also captures a screenshot if an error occurs during execution and attaches it to the Allure report.
+1. Open Swag Labs login page <br>
+2. Validate login page title <br>
+3. Enter username and password, then login <br>
+4. Validate main page title after login <br>
+5. Validate Products section title <br>
 
-Dependencies
-The following JAR files are included in the lib/ directory:
+The test script also captures a screenshot if an error occurs during execution and attaches it to the Allure report.<br>
 
-allure-commons-2.13.9.jar
-allure-junit4-2.13.9.jar
-byte-buddy-1.10.19.jar
-hamcrest-core-1.3.jar
-junit-4.13.2.jar
-selenium-server-4.23.0.jar
-webdrivermanager-5.9.2-fat.jar
-Ensure these JAR files are present in the lib/ directory to compile and run the tests successfully.
+Ensure these JAR files are present in the lib/ directory to compile and run the tests successfully. <br>
 
-Contribution
+## Contribution
 Feel free to contribute to the project by opening issues and pull requests. Make sure to follow best development practices and document your changes thoroughly.
 
 ```go
